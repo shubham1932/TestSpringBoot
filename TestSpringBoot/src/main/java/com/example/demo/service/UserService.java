@@ -14,5 +14,7 @@ public interface UserService {
 	User getUserById(String id);
 	
 	List<User> getAllUsers();
+	
+	Boolean deleteById(String id);
 
 }
