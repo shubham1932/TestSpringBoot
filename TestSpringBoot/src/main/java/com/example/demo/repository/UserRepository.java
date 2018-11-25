@@ -16,6 +16,10 @@ public interface UserRepository extends MongoRepository<User, String>{
 	
 	List<User> findAll() ;
 	
+	boolean existsByUid(String id) ;
+	
+	void deleteByUid(String id);
+	
 	@SuppressWarnings("unchecked")
 	User save(User user);
 

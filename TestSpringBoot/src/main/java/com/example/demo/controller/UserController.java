@@ -66,5 +66,16 @@ public class UserController {
 			 return userN;
 		}
 	}
+	
+	@RequestMapping(value="/users/{id}" , method = RequestMethod.DELETE)
+	public String deleteuserById(@PathVariable String id) {
+		
+		if (userService.deleteById(id)) {
+		return "Deleted user with "+id+" successfully";
+		}
+		else {
+			return "Some Error occurred. Unable to delete.";
+		}
+	}
 
 }

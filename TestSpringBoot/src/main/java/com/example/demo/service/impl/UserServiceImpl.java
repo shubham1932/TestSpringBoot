@@ -32,4 +32,14 @@ public class UserServiceImpl implements UserService {
 		return userRepository.findAll();
 	}
 
+	@Override
+	public Boolean deleteById(String id) {
+		if (userRepository.existsByUid(id)) {
+			 userRepository.deleteByUid(id);
+			 return Boolean.TRUE;
+		}
+		else return Boolean.FALSE;
+		
+	}
+
 }
