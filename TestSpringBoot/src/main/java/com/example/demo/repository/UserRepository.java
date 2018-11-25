@@ -1,5 +1,7 @@
 package com.example.demo.repository;
 
+import java.util.List;
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
@@ -10,7 +12,9 @@ public interface UserRepository extends MongoRepository<User, String>{
 	
 	User findUserByFirstName(String firstName);
 	
-	User findUserByLastName(String firstName);
+	User findUserByUid(String id);
+	
+	List<User> findAll() ;
 	
 	@SuppressWarnings("unchecked")
 	User save(User user);
