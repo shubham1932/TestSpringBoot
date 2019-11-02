@@ -2,7 +2,6 @@ package com.example.demo.repository;
 
 import java.util.List;
 
-import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
